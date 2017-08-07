@@ -22,7 +22,7 @@ exports.sourceExts = ['js', 'json'];
 
 exports.moduleSystem = require.resolve('./Resolver/polyfills/require.js');
 
-exports.platforms = ['ios', 'android', 'windows', 'web'];
+exports.platforms = ['ios', 'android', 'windows', 'web', 'ubuntu'];
 
 exports.providesModuleNodeModules = [
   'react-native',
