@@ -133,7 +133,9 @@ module.exports = class Transformer {
     // in the workers because it tries to open the same debugging port. Feel
     // free to add more cases to the RegExp. A whitelist is preferred, to
     // guarantee robustness when upgrading node, etc.
-    const execArgv = process.execArgv.filter(
+    var a = process.execArgv;
+    a.push("--max-old-space-size=8192");
+    const execArgv = a.filter(
       arg =>
         /^--stack[_-]trace[_-]limit=[0-9]+$/.test(arg) ||
         /^--heap[_-]growing[_-]percent=[0-9]+$/.test(arg) ||

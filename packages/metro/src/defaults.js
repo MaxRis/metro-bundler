@@ -47,7 +47,7 @@ exports.sourceExts = ['js', 'json'];
 
 exports.moduleSystem = require.resolve('./lib/polyfills/require.js');
 
-exports.platforms = ['ios', 'android', 'windows', 'web'];
+exports.platforms = ['ios', 'android', 'windows', 'web', 'desktop'];
 
 exports.providesModuleNodeModules = ['react-native', 'react-native-windows'];
 
